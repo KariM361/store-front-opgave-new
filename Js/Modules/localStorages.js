@@ -1,3 +1,4 @@
+//kurv
 
 let mydataName="data"
 
