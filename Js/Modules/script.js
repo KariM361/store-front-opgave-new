@@ -1,11 +1,11 @@
-import getProducts from "./module/api.js"
-import { view } from "./module/view/view.js"
+import {getProducts} from "./Modules/api.js"
+import { view } from "./Modules/view/view.js"
 // importerer funktionen getProducts fra din api.js modulfil.
-getProducts()
+getProducts(10)
 .then((data)=>{
   view(data)
 })
-//kalder getProducts med tallet 15 (henter 15 billeder).
+//kalder getProducts med tallet 10 (henter 10 billeder).
 //når billederne er hentet, kaldes view funktionen med data.
 
 

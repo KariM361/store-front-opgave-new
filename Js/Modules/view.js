@@ -9,8 +9,8 @@ getProducts(10).then(products => {
 //view code  
 
 export function view(data) {
-  const output = document.getElementById('main-container');
-  output.innerHTML = data
+  const maincontainer = document.getElementById('main-container');
+  maincontainer.innerHTML = data
     .map(product => `
       <div class="img-container">
         <img src="${product.thumbnail}" alt="${product.title}">
