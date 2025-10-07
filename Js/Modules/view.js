@@ -19,24 +19,23 @@ let productContainer = document.getElementById('productContainer')
 
 }
 
-// // eksempel i site.js eller script.js
-// import getProducts from './Modules/api.js';
-// import { view } from './Modules/view.js';
+export function renderProductDetails(product){
+let productContainer = document.getElementById('productContainer')
 
-// getProducts().then(products => {
-//   if (products) view(products);
-// });
+  let card = document.createElement('div')
+  let cardTitle = document.createElement('h2')
+   let cardImage = document.createElement('img')
+    let cardPrice= document.createElement('p')
 
-// //view code  
+    cardTitle.innerText = product.title
+    cardImage.src = product.thumbnail
+    cardPrice.innerText = product.price
+    
+    card.appendChild(cardImage)
+    card.appendChild(cardTitle)
+    card.appendChild(cardPrice)
 
-// export function view(data) {
-//   const maincontainer = document.getElementById('main-container');
-//   maincontainer.innerHTML = data
-//     .map(product => `
-//       <div class="img-container">
-//         <img src="${product.thumbnail}" alt="${product.title}">
-//         <div class="img-text">${product.title}</div>
-//       </div>
-//     `)
-//     .join('');
-// }
+   productContainer.appendChild(card)
+
+
+}

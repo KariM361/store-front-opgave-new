@@ -8,10 +8,11 @@ export async function getProducts(count) {
     });
 }
 
-// // eksempel i site.js eller script.js
-// import getProducts from './Modules/api.js';
-// import { view } from './Modules/view.js';
-
-// getProducts(10).then(products => {
-//   if (products) view(products);
-// });
+export async function getCategories(count) {
+   return fetch('https://dummyjson.com/products/categories' + count)
+    .then(response => response.json())
+    .then(data => data.products)
+    .catch(error => {
+      console.error('Fejl:', error);
+    });
+}
