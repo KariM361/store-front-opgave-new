@@ -5,3 +5,7 @@
 body {
     background-color: $blue;
 }
+#productContainer{
+    display:block;
+    flex-direction: column;
+}
