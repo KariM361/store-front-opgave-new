@@ -50,3 +50,29 @@ export function renderProductDetails(product) {
 
   productContainer.appendChild(detail);
 }
+
+export function renderCart(cartItems){
+let productContainer = document.getElementById('productContainer');
+  if (!productContainer) return;
+
+  productContainer.innerHTML = '';
+
+  let detail = document.createElement('div');
+  let title = document.createElement('h2');
+  let image = document.createElement('img');
+  let price = document.createElement('p');
+  let description = document.createElement('p');
+
+  title.innerText = product.title;
+  image.src = product.thumbnail;
+  image.alt = product.title;
+  price.innerText = product.price + " kr.";
+  description.innerText = product.description;
+
+  detail.appendChild(image);
+  detail.appendChild(title);
+  detail.appendChild(price);
+  detail.appendChild(description);
+
+  productContainer.appendChild(detail);
+}

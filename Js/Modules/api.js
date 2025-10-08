@@ -16,3 +16,4 @@ export async function getCategories(count) {
       console.error('Fejl:', error);
     });
 }
+

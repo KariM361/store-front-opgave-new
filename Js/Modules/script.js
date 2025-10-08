@@ -1,3 +1,4 @@
+
 import {getProducts} from "./api.js"
 import { renderProductcard } from "./view.js";
 import {renderProductDetails} from "./view.js";
