@@ -13,6 +13,7 @@ data.forEach(element => {
 });
 })
 
+
 //kalder getProducts med tallet 20 (henter 20 billeder).
 //når billederne er hentet, kaldes view funktionen med data.
 

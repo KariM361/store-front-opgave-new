@@ -5,8 +5,8 @@ export function renderProductcard(product) {
   let card = document.createElement('div');
   let cardTitle = document.createElement('h2');
   let cardImage = document.createElement('img');
-  let cardPrice = document.createElement('p');
   let description = document.createElement('p')
+  let cardPrice = document.createElement('p');
 
   cardTitle.innerText = product.title;
   cardImage.src = product.thumbnail;
