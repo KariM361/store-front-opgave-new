@@ -1,6 +1,6 @@
-
-
 @use "color" as *;
+@use 'global' as *;
+
 
 body {
     background-color: $rose;
@@ -11,7 +11,14 @@ body {
 }
 div{
   font-family: "Instrument Serif", serif;  
+
 }
 #køb{
-  
+  background-color: $red;
 }
+.material-symbols-outlined{
+     display: flex;
+     justify-content: flex-end;
+          
+}
+

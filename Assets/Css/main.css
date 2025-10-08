@@ -1,8 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 body {
-  background-color:#c086a8;
+  font-family: "Instrument Serif", serif;
+}
+
+#nav-main ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#nav-main ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  background-color: #c086a8;
 }
 
 #productContainer {
   display: block;
   flex-direction: column;
+}
+
+div {
+  font-family: "Instrument Serif", serif;
 }/*# sourceMappingURL=main.css.map */
