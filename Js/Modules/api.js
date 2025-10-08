@@ -17,3 +17,11 @@ export async function getCategories(count) {
     });
 }
 
+export async function renderCart(cartItems){
+  fetch('https://dummyjson.com/carts')
+  .then(response => response.json())
+    .then(data => data.carts[0].products)
+    .catch(error => {
+      console.error('Fejl:', error);
+    });
+}
