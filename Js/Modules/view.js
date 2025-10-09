@@ -110,11 +110,15 @@ export async function renderCategories(categories){
 
 export async function getSearchResults(query){
   let searchbar = document.getElementById('searchbar');
-  searchbar.addeventListener('input',(event) => event.target.value(product))
+  let container = document. getElementById('productContainer')
+  searchbar.addeventListener('input',(event) => event.target.value)
 
   if (!productContainer) return;
 
-  searchbar.innerHTML = '';
+container.innerHTML = '';
+searchbar.product.forEach(element =>{
+  renderProductcard()
+})
 
   searchbar.forEach(product => {
     let detail = document.createElement('div');
