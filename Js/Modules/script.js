@@ -1,9 +1,12 @@
+import { getProducts } from "./api.js";
+import { renderProductcard, renderProductDetails } from "./view.js";
+import { getSearchResults } from "./view.js";
 
-import {getProducts} from "./api.js"
-import { renderProductcard } from "./view.js";
+const searchbar = document.getElementById('searchbar');
+searchbar.addEventListener('input', (event) => {
+  getSearchResults(event.target.value);
+});
 
-
-// import { view } from "./Modules/view/view.js"
 // importerer funktionen getProducts fra din api.js modulfil.
 getProducts(20)
 .then((data)=>{
@@ -13,9 +16,11 @@ data.forEach(element => {
 });
 })
 
+ 
 
 //kalder getProducts med tallet 20 (henter 20 billeder).
 //når billederne er hentet, kaldes view funktionen med data.
+
 
 
 

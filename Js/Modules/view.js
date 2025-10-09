@@ -107,3 +107,67 @@ export async function renderCategories(categories){
 
     productContainer.appendChild(categories);
  })}
+
+export async function getSearchResults(query){
+  let searchbar = document.getElementById('searchbar');
+  searchbar.addeventListener('input',(event) => event.target.value(product))
+
+  if (!productContainer) return;
+
+  searchbar.innerHTML = '';
+
+  searchbar.forEach(product => {
+    let detail = document.createElement('div');
+    let title = document.createElement('h2');
+    let image = document.createElement('img');
+    let price = document.createElement('p');
+    let description = document.createElement('p');
+
+    title.innerText = product.title;
+    image.src = product.thumbnail;
+    image.alt = product.title;
+    price.innerText = product.price + " kr.";
+    description.innerText = product.description;
+
+    detail.appendChild(image);
+    detail.appendChild(title);
+    detail.appendChild(price);
+    detail.appendChild(description);
+
+    productContainer.appendChild(detail);
+ })}
+//  export async function getSearchResults(query) {
+//   let productContainer = document.getElementById('productContainer');
+//   if (!productContainer) return;
+
+//   // Hent data fra API
+//   const response = await fetch(`https://dummyjson.com/products/search?q=${query}`);
+//   const data = await response.json();
+//   const results = data.products;
+
+//   // Ryd containeren
+//   productContainer.innerHTML = '';
+
+//   // Vis resultater
+//   results.forEach(product => {
+//     let detail = document.createElement('div');
+//     let title = document.createElement('h2');
+//     let image = document.createElement('img');
+//     let price = document.createElement('p');
+//     let description = document.createElement('p');
+
+//     title.innerText = product.title;
+//     image.src = product.thumbnail;
+//     image.alt = product.title;
+//     price.innerText = product.price + " kr.";
+//     description.innerText = product.description;
+
+//     detail.appendChild(image);
+//     detail.appendChild(title);
+//     detail.appendChild(price);
+//     detail.appendChild(description);
+
+//     productContainer.appendChild(detail);
+//   });
+// }
+

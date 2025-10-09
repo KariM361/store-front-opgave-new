@@ -33,3 +33,11 @@ export async function renderCategories(categories){
       console.error('Fejl:', error);
     });
 }
+export async function searchProducktResults(query){
+  fetch(`https://dummyjson.com/products/search?q=${query}`)
+  .then(response => response.json())
+    .then(data => data.query.products)
+    .catch(error => {
+      console.error('Fejl:', error)
+    });
+}

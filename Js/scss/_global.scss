@@ -11,10 +11,15 @@ body{
      background-color: $darkrose;
 }
 #nav-main ul {
+     padding:1rem;
+     width:1rem;
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      list-style: none;
      padding-left: 0;
+     gap: 10rem;
+     font-size: 1.5rem;
+     font-weight: 700;
 
   }
 
@@ -23,12 +28,13 @@ body{
      text-decoration: none;
 }
 
-
-#header-main {
+#header-main{
   /* Din styling her */
   background-color: $rose;
   color: $black;
   padding: 1rem;
+  text-align: center;
+
 }
 
 //media
