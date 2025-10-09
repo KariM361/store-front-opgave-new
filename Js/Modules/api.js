@@ -25,3 +25,11 @@ export async function renderCart(cartItems){
       console.error('Fejl:', error);
     });
 }
+export async function renderCategories(categories){
+  fetch('https://dummyjson.com/products/categories')
+  .then(response => response.json())
+    .then(data => data.categories.products)
+    .catch(error => {
+      console.error('Fejl:', error);
+    });
+}

@@ -1,12 +1,12 @@
 @use "color" as *;
-@use 'global' as *;
+@use 'global' ;
 
 
 body {
     background-color: $rose;
 }
 #productContainer{
-    display:block;
+    display:grid;
     flex-direction: column;
 }
 div{

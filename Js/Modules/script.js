@@ -1,7 +1,7 @@
 
 import {getProducts} from "./api.js"
 import { renderProductcard } from "./view.js";
-import {renderProductDetails} from "./view.js";
+
 
 // import { view } from "./Modules/view/view.js"
 // importerer funktionen getProducts fra din api.js modulfil.

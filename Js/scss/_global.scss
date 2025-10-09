@@ -1,4 +1,7 @@
+
+@use 'color' as *;
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
 
 
 body{
@@ -26,4 +29,11 @@ body{
   background-color: $rose;
   color: $black;
   padding: 1rem;
+}
+
+//media
+@media(min-width: 600px){
+     #productContainer{
+          grid-template-columns: 1fr 1fr 1fr;
+     }
 }
