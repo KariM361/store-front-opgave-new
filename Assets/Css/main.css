@@ -4,6 +4,12 @@ body {
   font-family: "Instrument Serif", serif;
 }
 
+#productContainer {
+  display: grid;
+  padding: 2rem;
+  margin: 2rem;
+}
+
 #nav-main {
   background-color: #dd78b3;
 }
@@ -33,17 +39,29 @@ body {
   text-align: center;
 }
 
+#nav-main a:hover {
+  background-color: #75757b;
+}
+
+#main-footer {
+  background-color: #dd78b3;
+}
+
 @media (min-width: 600px) {
   #productContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-body {
-  background-color: #c086a8;
+#main-footer ul a {
+  color: #000000;
 }
 
-#productContainer {
-  display: grid;
+#main-footer ul li {
+  list-style: none;
+}
+
+body {
+  background-color: #c086a8;
 }
 
 div {

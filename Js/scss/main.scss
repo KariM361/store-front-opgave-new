@@ -1,13 +1,9 @@
 @use "color" as *;
 @use 'global' ;
-
+@use 'footer';
 
 body {
     background-color: $rose;
-}
-#productContainer{
-    display:grid;
-
 }
 div{
   font-family: "Instrument Serif", serif;  
@@ -21,4 +17,3 @@ div{
      justify-content: flex-end;
           
 }
-

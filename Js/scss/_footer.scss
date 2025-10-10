@@ -1,0 +1,10 @@
+@use 'color';
+
+#main-footer ul a{
+     color: color.$black;
+    
+}
+#main-footer ul li{
+ list-style: none;
+}
+
