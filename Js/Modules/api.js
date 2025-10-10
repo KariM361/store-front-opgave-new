@@ -1,6 +1,6 @@
-// Funktion til at hente et bestemt antal produkter fra API'et
+//controller code.
 export async function getProducts(count) {
-   return fetch('https://dummyjson.com/products?limit=' + count)
+   return fetch('https://dummyjson.com/products?limit=3' + count)
     .then(response => response.json())
     .then(data => data.products)
     .catch(error => {
@@ -8,7 +8,6 @@ export async function getProducts(count) {
     });
 }
 
-// Funktion til at hente kategorier fra API'et (count bruges ikke korrekt her)
 export async function getCategories(count) {
    return fetch('https://dummyjson.com/products/categories' + count)
     .then(response => response.json())
@@ -18,7 +17,6 @@ export async function getCategories(count) {
     });
 }
 
-// Funktion til at hente kurv-data fra API'et (henter første kurv)
 export async function renderCart(cartItems){
   fetch('https://dummyjson.com/carts')
   .then(response => response.json())
@@ -27,8 +25,6 @@ export async function renderCart(cartItems){
       console.error('Fejl:', error);
     });
 }
-
-// Funktion til at hente kategorier fra API'et (forkert brug af data.categories.products)
 export async function renderCategories(categories){
   fetch('https://dummyjson.com/products/categories')
   .then(response => response.json())
@@ -37,13 +33,11 @@ export async function renderCategories(categories){
       console.error('Fejl:', error);
     });
 }
-
-// Funktion til at søge efter produkter via API'et (forkert brug af data.query.products)
-export async function searchProducktResults(query){
-  fetch(`https://dummyjson.com/products/search?q=${query}`)
-  .then(response => response.json())
-    .then(data => data.query.products)
-    .catch(error => {
-      console.error('Fejl:', error)
-    });
-}
+// export async function getsearchbar(query){
+//   fetch(`https://dummyjson.com/products/search?q=${query}`)
+//   .then(response => response.json())
+//     .then(data => data.query.products)
+//     .catch(error => {
+//       console.error('Fejl:', error)
+//     });
+// }
